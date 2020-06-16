@@ -28,8 +28,14 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict/>
+	</array>
 	<key>NSSupportsAutomaticTermination</key>
 	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Please give access to Notes</string>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
 </dict>

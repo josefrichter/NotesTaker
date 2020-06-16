@@ -9,9 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack(alignment: .center) {
+            Text("Write a note:")
+            TextField("", text: $text)
+                .lineLimit(nil)
+                .frame(height: 55)
+                .frame(maxWidth: 300, maxHeight: .infinity)
+            Spacer()
+            Button(action: {SaveNote(text: self.text)}) {
+                Text("Save")
+            }
+        }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding()
     }
 }
 
@@ -19,5 +32,23 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+func SaveNote(text: String) {
+    let myAppleScript = """
+        tell application "Notes"
+            tell account "iCloud"
+                make new note at folder "Notes" with properties {name:"New note", body:"\(text)"}
+            end tell
+        end tell
+    """
+    var error: NSDictionary?
+    if let scriptObject = NSAppleScript(source: myAppleScript) {
+        if let outputString = scriptObject.executeAndReturnError(&error).stringValue {
+            print(outputString)
+        } else if (error != nil) {
+            print("error: ", error!)
+        }
     }
 }
