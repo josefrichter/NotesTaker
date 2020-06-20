@@ -13,6 +13,7 @@
 		1F1041472497DE7D00B3BE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1041462497DE7D00B3BE9B /* Assets.xcassets */; };
 		1F10414A2497DE7D00B3BE9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1041492497DE7D00B3BE9B /* Preview Assets.xcassets */; };
 		1F10414D2497DE7D00B3BE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F10414B2497DE7D00B3BE9B /* Main.storyboard */; };
+		38163E15249E558F009E889C /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38163E14249E558F009E889C /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1F10414C2497DE7D00B3BE9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F10414E2497DE7D00B3BE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F10414F2497DE7D00B3BE9B /* NotesTaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotesTaker.entitlements; sourceTree = "<group>"; };
+		38163E14249E558F009E889C /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				1F1041422497DE7B00B3BE9B /* AppDelegate.swift */,
 				1F1041442497DE7B00B3BE9B /* ContentView.swift */,
+				38163E14249E558F009E889C /* TextView.swift */,
 				1F1041462497DE7D00B3BE9B /* Assets.xcassets */,
 				1F10414B2497DE7D00B3BE9B /* Main.storyboard */,
 				1F10414E2497DE7D00B3BE9B /* Info.plist */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38163E15249E558F009E889C /* TextView.swift in Sources */,
 				1F1041452497DE7B00B3BE9B /* ContentView.swift in Sources */,
 				1F1041432497DE7B00B3BE9B /* AppDelegate.swift in Sources */,
 			);
@@ -287,7 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesTaker/Preview Content\"";
-				DEVELOPMENT_TEAM = J2GT45UV32;
+				DEVELOPMENT_TEAM = Z6JP26PUUY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NotesTaker/Info.plist;
@@ -310,7 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"NotesTaker/Preview Content\"";
-				DEVELOPMENT_TEAM = J2GT45UV32;
+				DEVELOPMENT_TEAM = Z6JP26PUUY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NotesTaker/Info.plist;

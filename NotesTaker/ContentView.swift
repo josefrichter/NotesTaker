@@ -9,15 +9,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var text = ""
+    @State private var text: String = ""
     
     var body: some View {
         VStack(alignment: .center) {
             Text("Write a note:")
-            TextField("", text: $text)
-                .lineLimit(nil)
-                .frame(height: 55)
-                .frame(maxWidth: 300, maxHeight: .infinity)
+            TextView(text: $text)
+                .frame(width: 400, height: 385)
             Spacer()
             Button(action: {SaveNote(text: self.text)}) {
                 Text("Save")
