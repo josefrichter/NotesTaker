@@ -34,10 +34,11 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 func SaveNote(text: String) {
+    let title = text.getTitle()
     let myAppleScript = """
         tell application "Notes"
             tell account "iCloud"
-                make new note at folder "Notes" with properties {name:"New note", body:"\(text)"}
+                make new note at folder "Notes" with properties {name:"\(title)", body:"\(text)"}
             end tell
         end tell
     """
@@ -50,3 +51,23 @@ func SaveNote(text: String) {
         }
     }
 }
+
+extension String
+{
+    func getTitle() -> String
+    {
+        if let regex = try? NSRegularExpression(pattern: "^(.*)", options: [])
+        {
+            let string = self as NSString
+
+            let results = regex.matches(in: self, options: [], range: NSRange(location: 0, length: string.length))
+            if let res = results.first {
+                return string.substring(with: res.range)
+            }
+
+        }
+
+        return ""
+    }
+}
+
